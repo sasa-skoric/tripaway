@@ -5,12 +5,13 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Service from "./pages/Service";
-import Contact from "./pages/Contact";
-import Gallery from "./pages/Gallery";
+import Contact from "./pages/Contact/Contact";
+import Gallery from "./pages/Gallery/Gallery";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -20,8 +21,10 @@ function App() {
           <Route path="/tripaway/contact" element={<Contact />} />
           <Route path="/tripaway/gallery" element={<Gallery />} />
         </Routes>
+
+        <Footer />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
